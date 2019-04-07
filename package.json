@@ -1,0 +1,38 @@
+{
+  "name": "gatsby-starter-default",
+  "description": "Gatsby default starter",
+  "version": "1.0.0",
+  "author": "richard <richard@kuangjia.org>",
+  "keywords": [
+    "gatsby",
+    "redux"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "start": "gatsby develop",
+    "clean": "rimraf .cache public",
+    "build": "gatsby build",
+    "develop": "npm run clean && gatsby develop",
+    "format": "prettier --write '**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/boy12371/gatsby-simple-redux"
+  },
+  "dependencies": {
+    "gatsby": "^2.3.14",
+    "gatsby-plugin-manifest": "^2.0.26",
+    "gatsby-plugin-offline": "^2.0.25",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.0",
+    "react-redux": "^6.0.1",
+    "redux": "^4.0.1"
+  },
+  "devDependencies": {
+    "prettier": "^1.16.4",
+    "rimraf": "^2.6.3"
+  }
+}
