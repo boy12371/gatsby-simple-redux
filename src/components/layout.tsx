@@ -1,44 +1,10 @@
-import React, { FC, MouseEvent } from "react";
+import React, { FC } from "react";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
-import { Dispatch } from "redux";
-import { connect } from "react-redux";
 
 import Header from "./header";
-import { StoreState, ActionTypes } from "../state/createStore";
+import Counter from "./counter";
 import "../assets/styles/layout.css";
-
-interface Props {
-    count: number;
-    increment: (event: MouseEvent) => void;
-}
-
-const Counter: FC<Props> = ({ count, increment }) => (
-    <div>
-        <p>Count: {count}</p>
-        <button onClick={increment}>Increment</button>
-    </div>
-);
-interface StateProps {
-    count: number;
-}
-
-const mapStateToProps = (state: StoreState): StateProps => ({ count: state.count });
-
-interface DispatchProps {
-    increment: () => {
-        type: ActionTypes.INCREMENT;
-    };
-}
-
-const mapDispatchToProps = (dispatch: Dispatch<any>): DispatchProps => {
-    return { increment: () => dispatch({ type: ActionTypes.INCREMENT }) };
-};
-
-const ConnectedCounter = connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(Counter);
 
 const Layout: FC = ({ children }) => (
     <StaticQuery
@@ -69,7 +35,7 @@ const Layout: FC = ({ children }) => (
                     }}
                 >
                     {children}
-                    <ConnectedCounter increment={() => ActionTypes.INCREMENT} />
+                    <Counter />
                 </div>
             </>
         )}
