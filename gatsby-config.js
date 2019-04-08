@@ -1,22 +1,26 @@
+"use strict";
+
+require("source-map-support").install();
+
+require("tsconfig-paths").register({
+    baseUrl: "./",
+    paths: {
+        "@src/*": ["src/*"],
+        "@test/*": ["test/*"]
+    }
+});
+
+require("ts-node").register({
+    compilerOptions: {
+        module: "commonjs",
+        target: "es5",
+        noImplicitAny: false
+    }
+});
+
+const config = require("./src/common/config");
+
 module.exports = {
-    siteMetadata: {
-        title: "Simple Redux Starter"
-    },
-    plugins: [
-        "gatsby-plugin-react-helmet",
-        {
-            resolve: `gatsby-plugin-manifest`,
-            options: {
-                name: "simple-redux-starter",
-                short_name: "simple-redux",
-                start_url: "/",
-                background_color: "#663399",
-                theme_color: "#663399",
-                display: "minimal-ui",
-                icon: "src/assets/img/gatsby-icon.png" // This path is relative to the root of the site.
-            }
-        },
-        "gatsby-plugin-offline",
-        `gatsby-plugin-typescript`
-    ]
+    siteMetadata: config.siteMetadata,
+    plugins: config.plugins
 };

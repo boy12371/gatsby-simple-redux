@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import StoreContainer from "../container/StoreContainer";
+import StoreContainer from "../../container/StoreContainer";
 
 const Counter: FC = () => (
     <StoreContainer>

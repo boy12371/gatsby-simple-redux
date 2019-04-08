@@ -2,10 +2,10 @@ import React, { FC } from "react";
 import { Link } from "gatsby";
 
 interface Props {
-    siteTitle: string;
+    siteTitle?: string;
 }
 
-const Header: FC<Props> = ({ siteTitle }) => (
+const HeaderView: FC<Props> = ({ siteTitle = "Start" }) => (
     <div
         style={{
             background: "rebeccapurple",
@@ -34,4 +34,4 @@ const Header: FC<Props> = ({ siteTitle }) => (
     </div>
 );
 
-export default Header;
+export default HeaderView;

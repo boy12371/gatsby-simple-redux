@@ -1,0 +1,29 @@
+backend:
+    name: github
+    repo: boy12371/gatsby-netlify-cms
+    branch: master
+    api_root: https://api.github.com
+    base_url: https://api.netlify.com
+    auth_endpoint: auth
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+    - name: settings
+      label: 设置
+      files:
+          - file: src/pages/settings/units.md
+            label: 单位
+            name: units
+            fields:
+                - label: Template Key
+                  name: templateKey
+                  widget: hidden
+                  default: UnitsSettings
+                - label: 货币
+                  name: currency
+                  widget: string
+                - label: 重量
+                  name: weight
+                  widget: string
