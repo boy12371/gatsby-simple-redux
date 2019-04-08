@@ -1,8 +1,6 @@
-# Project dependencies
-.cache
 node_modules
-yarn-error.log
-
-# Build directory
-/public
+.cache/
+public/
+static/kuang/*.bundle.*
 .DS_Store
+yarn-error.log

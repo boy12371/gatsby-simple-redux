@@ -1,5 +1,44 @@
-{
-  "semi": false,
-  "singleQuote": true,
-  "trailingComma": "es5"
-}
+printWidth: 140
+eslintIntegration: false
+tabWidth: 4
+singleQuote: false
+trailingComma: none
+bracketSpacing: true
+jsxBracketSameLine: false
+parser: flow
+semi: true
+useTabs: false
+overrides:
+    - files: ".vue"
+      options:
+          parser: vue
+    - files: "*.json"
+      options:
+          parser: json
+    - files: ".eslintrc"
+      options:
+          parser: json
+    - files: ".postcssrc"
+      options:
+          parser: json
+    - files: ".babelrc"
+      options:
+          parser: json
+    - files: "*.ts"
+      options:
+          parser: typescript
+    - files: "*.tsx"
+      options:
+          parser: typescript
+    - files: "*.yml"
+      options:
+          parser: yaml
+    - files: ".prettierrc"
+      options:
+          parser: yaml
+    - files: "*.md"
+      options:
+          parser: markdown
+    - files: "*.css"
+      options:
+          parser: css

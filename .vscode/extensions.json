@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+        "msjsdiag.debugger-for-chrome",
+        "steoates.autoimport",
+        "EditorConfig.EditorConfig",
+        "dbaeumer.vscode-eslint",
+        "xabikos.javascriptsnippets",
+        "waderyan.nodejs-extension-pack",
+        "esbenp.prettier-vscode",
+        "stevencl.adddoccomments"
+    ]
+}
